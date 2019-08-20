@@ -12,7 +12,39 @@ Itens que não foi possível configurar:
 
 
 
-### Audio: 
+### TELA DE **BOOT**
+
+clover options: 
+
+	configs:
+	
+		config.plist // Desktops
+		config2.plist // Notebooks
+
+		Mac OS Expandido (Journaling)
+		Mapa de Partição GUID
+
+
+
+### PÓS INSTALAÇÃO
+
+Abrir pasta **Files** e executar:
+	
+- Master.disable
+- Instalar clover
+
+Opções a serem marcadas no Clover:
+
+- Instalar clover na ESP
+- Bootloader/Não atualiza os setores de MBR
+- CloverEFI/CloverEFI 64-bits SATA
+- Instalar o painel de preferências do Clover
+
+Abrir Olarila da pasta Files
+
+Na aba Olarila Folders selecionar Notebooks SkyLake+
+
+### ÁUDIO: 
 
 **Layout IDs:** 5, 11, 13, 14, 21, 22, 28, 56, 57
 
@@ -26,7 +58,7 @@ Feito isso vá até à config.plist que está na pasta EFI/Clover e em ACPI apli
 Reinicie o Hackintosh e provavelmente estará funcionando. Caso não funcione troque para outro Layout ID e reinicie novamente.
 
 
-### Vídeo:
+### VÍDEO:
 
 Para certificar-se que o vídeo está funcionando corretamente aplique as seguintes mudanças
 
@@ -37,3 +69,11 @@ Agora vá até o campo **ig-plataform-id** e selecione **0x191b0000** (estará e
 
 
 
+### TRACKPAD
+
+Para resolver o erro do trackpad execute os seguintes passos:
+
+Usando a kext
+ApplePS2SmartTouchPad.kext
+Copie o kext para a pasta EFI/Clover/Kext/other/....
+Copiar Trackpad.prefPane para /System/Biblioteca/PreferencesPanes.
