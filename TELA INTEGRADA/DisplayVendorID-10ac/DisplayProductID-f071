@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DisplayProductID</key>
+	<integer>61553</integer>
+	<key>DisplayProductName</key>
+	<string>DELL SE2216H</string>
+	<key>DisplayVendorID</key>
+	<integer>4268</integer>
+	<key>IODisplayEDID</key>
+	<data>
+	AP///////wAGEHycSTRLNQ8dAQOAMBtg6m+xp1VMniUMUFSlSwBxT4GAqcDRwAEBAQEB
+	AQEBAjqAGHE4LUBYLEUA3AwRAAAeAAAA/wBINU1OVjk0QzVLNEkKAAAA/ABERUxMIFNF
+	MjIxNkgKAAAA/QA4TB5TEQAKICAgICAgAVo=
+	</data>
+</dict>
+</plist>
