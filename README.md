@@ -1,18 +1,19 @@
 # Samsung Hackintosh
 
-Modelo: NP300E5L
+Model: NP300E5L
 
-Resumo:
+summary:
 
-Quase todo o sistema está em pleno funcionamento.
+Almost the entire system is fully operational.
 
-Itens que não foi possível configurar:
+Items that could not be configured:
 
 - Wireless Qualcomm Atheros QCA9377
 
+I used the olarilla ISO
+You can download the ISO: http://bit.ly/2lLZomm
 
-
-### TELA DE **BOOT**
+### SCREEN **BOOT**
 
 clover options: 
 
@@ -26,71 +27,76 @@ clover options:
 
 
 
-### PÓS INSTALAÇÃO
+### POST INSTALLATION
 
-Abrir pasta **Files** e executar:
+Open ** Files ** folder and run:
 	
 - Master.disable
-- Instalar clover
+- Install clover
 
-Opções a serem marcadas no Clover:
+Options to tag in Clover:
 
-- Instalar clover na ESP
-- Bootloader/Não atualiza os setores de MBR
+- Install clover on ESP
+- Bootloader / Does not update MBR sectors
 - CloverEFI/CloverEFI 64-bits SATA
-- Instalar o painel de preferências do Clover
+- Install Clover Preferences Panel
 
-Abrir Olarila da pasta Files
+Open Olarila from Files folder
 
-Na aba Olarila Folders selecionar Notebooks SkyLake+
 
-### ÁUDIO: 
+Você quis dizer: Na aba Olarila Folders selecionar Notebooks SkyLake
+52/5000
+In the Olarila Folders tab select SkyLake+ Notebooks
+
+### AUDIO: 
 
 **Layout IDs:** 5, 11, 13, 14, 21, 22, 28, 56, 57
 
-O layout 11 foi o que funcionou melhor para mim. Consegui com que o microfone funciona-se com ótima qualidade!
+Layout 11 was what worked best for me. I got the microphone to work with great quality!
 
-Para fazer o audio funcionar é necessário tentar os Layout IDs que estão dispostos e instalar o Kext AppleALC
+To make the audio work you need to try the layout IDs that are arranged and install Kext AppleALC
 
-Também é possível baixar pelo link do Github:
-https://github.com/vit9696/AppleALC
+You can also download it from the Github link:
+http://bit.ly/2kzsl4L
 
-Feito isso vá até à config.plist que está na pasta EFI/Clover e em ACPI aplique o patch **change HDAS to HDEF**. 	
+After that go to the config.plist which is in the EFI / Clover folder and in ACPI apply the patch. **change HDAS to HDEF**. 	
 
-Reinicie o Hackintosh e provavelmente estará funcionando. Caso não funcione troque para outro Layout ID e reinicie novamente.
+Restart Hackintosh and it will probably be working. If it does not work change to another Layout ID and restart again.
 
 
-### VÍDEO:
+### VIDEO:
 
-Para certificar-se que o vídeo está funcionando corretamente aplique as seguintes mudanças
+To make sure your video is working correctly, apply the following changes:
 
-Para a intel HD Graphics 520 execute os seguintes procedimentos.
-Abra a sua config.plist e selecione a aba lateral esquerda que diz Graphics, e dentro dela marque a caixinha **IntectIntel**
+For intel HD Graphics 520 perform the following procedures.
+Open your config.plist and select the left side tab that says Graphics, and inside it check the box **IntectIntel**
 
-Agora vá até o campo **ig-plataform-id** e selecione **0x19160000** (estará em Skylake mobile)
+Now go to the field **ig-plataform-id** and select **0x19160000** (will be on Skylake mobile)
 
-Por fim coloque **3** no campo **Video Ports**
+Finally put **3** on field **Video Ports**
 
 
 ### TRACKPAD
 
-Para resolver o erro do trackpad execute os seguintes passos:
+To fix trackpad, run the following steps
 
-Usando a kext
+Using the kext
 ApplePS2SmartTouchPad.kext
-Copie o kext para a pasta EFI/Clover/Kext/other/....
-Copiar Trackpad.prefPane para /System/Biblioteca/PreferencesPanes.
+Copy the kext to the folder EFI/Clover/Kext/other/....
+Copy Trackpad.prefPane to /System/Biblioteca/PreferencesPanes.
 
 
-### TELA INTEGRADA
+### INTEGRATED SCREEN
 
-Usando com o tempo percebi que a qualidade da imagem que chegava a minha tela integrada não era exatamente o que esperava, mesmo com a placa grafica funcionando. Posteriormente adquiri um monitor Full HD da Dell que tentei usar o HDMI e tive sucesso, entretanto o aceleramento gráfico estava meio confuso e estranho. Consegui resolver esse problema aplicando um patch EDID. 
+Using over time realizes that the image quality that came to my integrated screen was not exactly what I expected, even with the graphics card working. I later got a Dell Full HD monitor that I tried to use HDMI and was successful, however the graphics acceleration was a bit confusing and weird. I was able to solve this problem by applying an EDID patch.
 
-Siga os passos para resolver.
+Follow the steps to fix: 
 
-Copie a pastas DisplayVendorID-X e o arquivo Icons.plist para: `/System/Library/Displays/Contents/Resources/Overrides`
+Copy the folder DisplayVendorID-X and the file Icons.plist to: `/System/Library/Displays/Contents/Resources/Overrides`
 
-Agora, execute o cloverConfigurator e abra sua config.plist. Nela selecione a aba ACPI e aplique o seguinte patch DSDT. 
+Now, run CloverConfigurator and your config.plist. Select on the ACPI tab the following
+
+Now run cloverConfigurator and open your config.plist. From there select the ACPI tab and apply the following DSDT patch.
 
 | 		Comment				 | Find* [HEX] | Replace [HEX] |  
 |---------|---------- |----------|
