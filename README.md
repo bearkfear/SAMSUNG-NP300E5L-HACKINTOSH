@@ -102,23 +102,7 @@ Now run cloverConfigurator and open your config.plist. From there select the ACP
 |---------|---------- |----------|
 | Rename H_EC to EC__ | 485F4543   | 45435F5F | 
 
+## BATERRY
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+To make baterry indicator works you just need to copy my DSDT (already patched) to Clover Folder (EFI/Clover/ACPI/patched)
+It's make system better too.
